@@ -1,0 +1,24 @@
+﻿##--g_page_prev_next--
+##spec_prev_next_001004115##
+<h3>Полезные ссылки
+    <span class="right">
+        ##g_page_prev##
+        ##g_page_next##
+        ##g_print_version##
+    </span>
+</h3>--##
+<div class="dark mark">
+    <nav>
+	##IF(strlen(g_pages_nav)>29)##
+    	##g_pages_nav##
+	##else##
+    	##g_pages_back##
+	##endif##
+    </nav>
+</div>
+##IF(strpos(script_link,"/corporate")>0||strpos(script_link,"/retail")>0)##
+<div id="tariff" class="dark">
+    <a class="bigbutton" title="Тарифы" href="ru/tariff">Тарифы</a>
+    <p>Каталог услуг и тарифов <nobr>АО «Сити Инвест Банк»</nobr></p>
+</div>
+##endif##

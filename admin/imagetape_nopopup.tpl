@@ -6,11 +6,6 @@
 ##if(scroll != 1)##
     <table>
         <tr>
-            <td align="center" class="it_main_image">
-                <img src="##initial_image##" id="image-##group##"/>
-            </td>
-        </tr>
-        <tr>
             <td>
                 <div class="imagetapeControl left" style="height:##height##px;" id="prev-##group##"></div>
                 <div id="slider-##group##" style="width:##width##px;height:##height##px;overflow:hidden;float:left;">
@@ -20,17 +15,22 @@
                 <div style="clear:both;"></div>
             </td>
         </tr>
+        <tr>
+            <td align="center" class="it_main_image">
+                <img src="##initial_image##" id="image-##group##"/>
+            </td>
+        </tr>
     </table>
 ##else##
-<div style="float:left;padding:33px 15px 0 0" class="it_main_image">
-        <img src="##initial_image##" id="image-##group##"/>
-    </div>
     <div style="float:left;">
         <div class="imagetapeControl up" style="width:##width##px;" id="prev-##group##"></div>
         <div id="slider-##group##" style="width:##width##px;height:##height##px;overflow:hidden;clear:both;">
             <div id="container-##group##" style="position:relative;width:##totalw##px;height:##totalh##px;">##imageset##</div>
         </div>
         <div class="imagetapeControl down" style="width:##width##px;" id="next-##group##"></div>
+    </div>
+	<div style="float:left;padding:33px 15px 0 0" class="it_main_image">
+        <img src="##initial_image##" id="image-##group##"/>
     </div>
     <div style="clear:both;"></div>
 ##endif##

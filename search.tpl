@@ -4,17 +4,17 @@
 <!--#set var="found_word_start" value="<span class="hl_text">"-->
 <!--#set var="found_word_end" value="</span>"-->
 
-
 <!--#set var="item_row" value="
+##--
 ##setvar @rowNum=(abs_row_index+1)##
 <tr><td style="clear:left; //height: 1px;">
-<div style="float:left;width:16px;text-align:right;margin-right:-16px;">##rowNum##.</div>
-<div style="padding-left:25px;height:1%"><b><a href="##link##">##title##</a></b>
-<div>##announce####--announce_full--##</div>
-<a href="##link##">##link##</a>
-</div>
-<br><br>
-</td></tr>
+<div style="float:left;width:16px;text-align:right;margin-right:-16px;">##rowNum##.</div>--##
+##--<div style="padding-left:25px;height:1%"><b><a href="##link##">##title##</a></b>--##
+<section>
+    <h2><a href="##link##">##title##</a></h2>
+    <div>##announce####--announce_full--##</div>
+    <div><a href="##link##">##link##</a></div>
+</section>
 "-->
 
 <!--#set var="item_list_empty" value="
@@ -57,15 +57,7 @@
 
 <!--#set var="small_block" value="
 <form name="small_search" action="##search_link##" method="get">
-
-<nobr>
-
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
- <td><input type="text" name="words" id="idSearchWords##BLOCK_PREFIX##" class="txt wd2" value="%%search_word%%" onfocus="if(this.value=='%%search_word%%') this.value='';" onblur="if(this.value=='') this.value='%%search_word%%';" size="20" autocomplete="off"></td>
-</tr>
-</table>
-</nobr>
+<input type="text" name="words" id="idSearchWords##BLOCK_PREFIX##" class="txt wd2" value="%%search_word%%" onfocus="if(this.value=='%%search_word%%') this.value='';" onblur="if(this.value=='') this.value='%%search_word%%';" size="20" autocomplete="off">
 <input type="hidden" name="is" value="1">
 <input type="hidden" name="ia" value="##is_advanced##">
 <input type="hidden" name="pages" value="##page_fields_list##">
@@ -89,22 +81,18 @@ var searchVariants = new AMI.UI.Suggestion('idSearchWords##BLOCK_PREFIX##', sugg
 </script>
 "-->
 <!--#set var="item_list" value="
-<tr>
-  ##list##
-</tr>
-<tr><td align=right><br>##pager##</td></tr>
+##list##
+##pager##
 "-->
 
 <!--#set var="body_items" value="
 ##item_list##
 "-->
 
-<br><br>
 <script type="text/javascript" language="JavaScript1.2">
 ##advanced_search_js##
 </script>
 <form method="get" action="##script_link##" name="search">
-
 <table border="0" width=100% cellpadding=o cellspacing=0>
 <tr>
   <td align="left">
@@ -121,13 +109,9 @@ var searchVariants = new AMI.UI.Suggestion('idSearchWords##BLOCK_PREFIX##', sugg
 </tr>
 </table>
 </form>
-<br><br>
-##if(EMPTY_QUERY!="1")##
-%%query%%: <b>##query##</b> %%pages%%: ##if(_total_rows > 0)####_total_rows####else##0##endif##
-##endif##
-<br><br>
-<div align=center></div>
 
-<table border="0" width=100%  cellpadding=o cellspacing=0>
+##if(EMPTY_QUERY!="1")##
+<p>%%query%%: <b>##query##</b> %%pages%%: ##if(_total_rows > 0)####_total_rows####else##0##endif##</p>
+##endif##
+
 ##body##
-</table>

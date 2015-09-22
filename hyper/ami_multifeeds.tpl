@@ -62,7 +62,7 @@ Example: class = "##AMI_CONF_ID##_item". The class name will contain the name of
  * Minisets for item row
  */--##
 
-<!--#set var="item_header;browse_item_header;sticky_item_header;subitem_header" value="<a class="##AMI_CONF_ID##_item-row__header-name" href="##front_link####nav_data##offset=##offset##&catoffset=##catoffset##">##header##</a>"-->
+<!--#set var="item_header;browse_item_header;sticky_item_header;subitem_header" value="<a class="##AMI_CONF_ID##_item-row__header-name" href="##front_link####nav_data####--7.0.0.0 (patched: 2015-07-31 08:51:37)--####--offset=##offset##&catoffset=##catoffset##--####-- end 7.0.0.0 (patched: 2015-07-31 08:51:37)--##">##header##</a>"-->
 <!--#set var="subitem_announce;item_announce;browse_item_announce;sticky_item_announce" value="<div class="##AMI_CONF_ID##_item-row__announce">##announce##</div>"-->
 <!--#set var="item_author;small_author;sticky_item_author" value="<span class="##AMI_CONF_ID##_item-row__author">%%by%%: ##author## &nbsp;</span>"-->
 <!--#set var="item_source;small_source;sticky_item_source" value="<span class="##AMI_CONF_ID##_item-row__source">%%source%%: ##source## &nbsp;</span>"-->
@@ -93,7 +93,7 @@ Example: class = "##AMI_CONF_ID##_item". The class name will contain the name of
 <!--#set var="small_ftime" value="<span class="##AMI_CONF_ID##_item-small__ftime">##ftime##</span>"-->
 <!--#set var="small_announce" value="<div class="##AMI_CONF_ID##_item-small-row__announce">##announce##</div>"-->
 <!--#set var="small_fdate" value="<span class="##AMI_CONF_ID##_item-small__fdate">##fdate##</span>"-->
-<!--#set var="small_header" value="<a href="##front_link####nav_data##">##header##</a>"-->
+<!--#set var="small_header" value="<a href="##front_link####nav_data##"##--7.0.0.0 (patched: 2015-07-31 08:51:37)--##>##_header##<##-- end 7.0.0.0 (patched: 2015-07-31 08:51:37)--##/a>"-->
 <!--#set var="small_more" value="<a class="##AMI_CONF_ID##_item-small__more" href="##front_link####nav_data##">%%more%%</a>"-->
 
 ##-- ---------------------------------------------------------------------------------- --##

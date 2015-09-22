@@ -6,10 +6,10 @@
     <div class="left_imagetape_fullinfo">
         <div class="header_fullinfo" id="header_fullinfo_##group##"></div>
         <div class="description_fullinfo" id="description_fullinfo_##group##"></div>
-        <a class="links_fullinfo" id="links_fullinfo_##group##" href="#"><span id="urlcapt_##group##"></span></a>
+        ##--<a class="links_fullinfo" id="links_fullinfo_##group##" href="#"><span id="urlcapt_##group##"></span></a>--##
     </div>
     <div class="right_imagetape_fullinfo">
-        <img src="/_img/spacer.gif" id="image-##group##"/>
+        <a class="links_fullinfo" id="links_fullinfo_##group##" href="#"><span id="urlcapt_##group##"></span><img src="/_img/spacer.gif" id="image-##group##"/></a>
     </div>
     <div id="container-##group##" class="bottom_imagetape_fullinfo">
         ##imageset##

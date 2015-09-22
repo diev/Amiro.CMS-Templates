@@ -1,10 +1,25 @@
-﻿%%include_template "templates/search.tpl"%%
+﻿##--
+<script>
+function more(link) {
+    var rem = link.nextSibling;
+    rem.style.display = (rem.style.display == 'block')? 'none' : 'block';
+    if(rem.style.display == 'block')
+        link.innerHTML += ':';
+    else
+        link.innerHTML = link.innerHTML.slice(0, -1);
+    return false;
+}
+</script>
+--##
+
+%%include_template "templates/search.tpl"%%
 %%include_language "templates/lang/stickers.lng"%%
 
 ##-- minisets --##
 
 <!--#set var="small_header" value="##header##"-->
-<!--#set var="small_announce" value="<div class="##__SET_NAME__##">##announce##</div>"-->
+##--<!--#set var="small_announce" value="<div class="##__SET_NAME__##">##announce##</div>"-->--##
+<!--#set var="small_announce" value="##announce##"-->
 <!--#set var="small_picture" value="##picture##"-->
 <!--#set var="small_fdate" value="##fdate##"-->
 
@@ -13,7 +28,7 @@
 
 ##-- ================== Item small block sets =========================== --##
 
-<!--#set var="small_row" value="
+<!--#set var="small_row" value="##--
 <td class="##__SET_NAME__##" id="##rand_id##_td">
 	<div class="small_header">
 		<a href='#' onclick='ShowHideSticker("##rand_id##"); return false;' class='header_link' id="##rand_id##_text">##header##</a>
@@ -23,10 +38,14 @@
 		##small_picture##
 		##announce##
 	</div>
-</td>
+</td>--##
+##--<span class="more" onclick="return more(this)">##header##</span><aside class="moretext">--##
+<span class="more">##header##</span><div class="moretext">
+##small_picture##
+##announce##</div>
 "-->
 
-<!--#set var="small_list_list" value="
+<!--#set var="small_list_list" value="##--
 
 <script language=javascript>
 
@@ -51,7 +70,8 @@ function ShowHideSticker(id){
 <tr>
   ##list##
 </tr>
-</table>
+</table>--##
+  ##list##
 "-->
 
 <!--#set var="small_list_empty" value="%%no_items%%"-->

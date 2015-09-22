@@ -1,0 +1,31 @@
+﻿##--g_page_prev_next--
+##spec_prev_next_001004115##
+<h3>Полезные ссылки
+    <span class="right">
+        ##g_page_prev##
+        ##g_page_next##
+        ##g_print_version##
+    </span>
+</h3>--##
+<div class="dark mark">
+    <nav>
+	##IF(strlen(g_pages_nav)>29)##
+    	##g_pages_nav##
+	##else##
+    	##g_pages_back##
+	##endif##
+        <hr>
+        <a class="h3" href="ru/corporate/online/new/manual" title="Руководства">Руководства</a>
+        <a class="h3" target="_blank" href="ftpgetfile.php?id=573&amp;module=files">
+        	<span class="menu-val"><img border="0" align="absmiddle" src="http://www.cibank.ru/ftpicons/small_pdf.gif" alt="PDF"></span>
+        	Памятка о правилах безопасной работы в системе Интернет-клиент.pdf
+    	</a>
+        ##--<a class="h3" href="ru/info" title="Памятки">Памятки</a>--##
+    </nav>
+</div>
+##IF(strpos(script_link,"/corporate")>0||strpos(script_link,"/retail")>0)##
+<div id="tariff" class="dark">
+    <a class="bigbutton" title="Тарифы" href="ru/tariff">Тарифы</a>
+    <p>Каталог услуг и тарифов <nobr>АО «Сити Инвест Банк»</nobr></p>
+</div>
+##endif##

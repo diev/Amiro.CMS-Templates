@@ -6,7 +6,7 @@
 ##-- ================== Styles for categories list =========================== --##
 
 <!--#set var="cat_name;urgent_cat_name" value="<!--cat_name-->##name##"-->
-<!--#set var="cat_lname;urgent_cat_lname" value="##IF(name!=".")##<!--cat_lname--><a class="h3" href="##script_link####nav_data##&catoffset=##catoffset##">##name##</a>##endif##"-->
+<!--#set var="cat_lname;urgent_cat_lname" value="##IF(name!=".")##<!--cat_lname--><a class="h2" href="##script_link####nav_data##&catoffset=##catoffset##">##name##</a>##endif##"-->
 <!--#set var="cat_announce;urgent_cat_announce" value="<!--cat_announce--><div>##announce##</div>"-->
 <!--#set var="cat_body;urgent_cat_body" value="<!--cat_body-->##body##<!--/cat_body-->"-->
 <!--#set var="cat_num_items;urgent_cat_num_items" value="<!--cat_num_items-->[ ##num_items## ]"-->
@@ -21,7 +21,7 @@
 <!--#set var="itemD_cat_name" value="<!--itemD_cat_name-->##cat_name##"-->
 <!--#set var="itemD_cat_announce" value="<!--itemD_cat_announce--><div class="cat_announce">##cat_announce##</div>"-->
 <!--#set var="itemD_cat_body" value="<!--itemD_cat_body-->##cat_body##"-->
-<!--#set var="itemD_cat_link" value="<!--itemD_cat_link--><a class="h3" href="##script_link##?##front_cats_link##">##page_name##</a>
+<!--#set var="itemD_cat_link" value="<!--itemD_cat_link--><a href="##script_link##?##front_cats_link##">##page_name##</a>
 "-->
 
 <!--#set var="itemD_cat_item_link" value="<!--itemD_cat_item_link--> / <a href="##script_link####cat_nav_data####front_items_link##">##_cat_name##</a>"-->
@@ -35,14 +35,16 @@
 ##-- ================== Categories list sets ==================================== --##
 
 <!--#set var="cat_row;urgent_cat_row" value="<!--cat_row-->
-##--name--##
-##IF(strlen(name)>0)##
-##setglobalvar @g_pages_nav = @g_pages_nav.name##
-##else##
+<section>
+##name##
+##announce##
+##--IF(strlen(name)>0)--##
+##--setglobalvar @g_pages_nav = @g_pages_nav.'<div class="side_link">'.name.'</div>'--##
+##--else--##
 ##--setglobalvar @g_pages_nav = ""--##
-##urgent_item_list##
 ##item_list##
-##endif##
+##--endif--##
+</section>
 <!--/cat_row-->
 "-->
 
@@ -140,15 +142,7 @@
 <!--/item_row-->
 "-->
 
-<!--#set var="urgent_item_list" value="<!--urgent_item_list-->
-##pager##
-<ul class="urgent-files">##list##</ul>
-##pager##
-<hr>
-<!--/urgent_item_list-->
-"-->
-
-<!--#set var="item_list" value="<!--item_list-->
+<!--#set var="item_list;urgent_item_list" value="<!--item_list-->
 ##pager##
 <ul class="files">##list##</ul>
 ##pager##
@@ -173,9 +167,7 @@
 "-->
 
 <!--#set var="body_items" value="<!--body_items-->
-<section>
-##--setglobalvar @g_pages_path = g_pages_path_1.cat_link.g_pages_path_s.'<span class="active">'.cat_name.'</span>'--##
-##setglobalvar @g_pages_path = g_pages_path_1.g_pages_path_s.cat_link##    
+##setglobalvar @g_pages_path = g_pages_path_1.cat_link.g_pages_path_s.'<span class="active">'.cat_name.'</span>'##
 ##setglobalvar @g_pages_nav = @g_pages_nav.cat_link##
 ##setglobalvar @page_name = cat_name##
 ##setglobalvar @g_subcat = 1##        
@@ -187,7 +179,6 @@
 ##item_list##
 ##--cat_link--##
 ##--<div align=right>##rss_generate##</div>--##
-</section>
 <!--/body_items-->
 "-->
 

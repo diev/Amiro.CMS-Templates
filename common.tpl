@@ -41,11 +41,15 @@
 
 <!--#set var="page_header" value="##content##"-->
 
-<!--#set var="page_prev" value="<a href="##front_link##" title="##name##">%%page_prev%%</a>"-->
-<!--#set var="page_next" value="<a href="##front_link##" title="##name##">%%page_next%%</a>"-->
-<!--#set var="page_prev_next_splitter" value="|"-->
-<!--#set var="page_prev_next" value="<div class="alt_header4">##prev## ##splitter## ##next##</div>"-->
+<!--#set var="page_prev" value="<span id=page_prev><a href="##front_link##" title="##name####--%%page_prev%%--##">&lsaquo;</a></span>"-->
+<!--#set var="page_next" value="<span id=page_next><a href="##front_link##" title="##name####--%%page_next%%--##">&rsaquo;</a></span>"-->
+<!--#set var="page_prev_next_splitter" value=""-->
+<!--#set var="page_prev_next" value="
+##setglobalvar @g_page_prev = prev##
+##setglobalvar @g_page_next = next##
+##--<div id=page_prev_next>##prev####splitter####next##</div>--##
+"-->
 
-<!--#set var="module_body" value="##content##"-->
+<!--#set var="module_body" value="<output>##content##</output>"-->
 
-<!--#set var="page_body" value="##content##"-->
+<!--#set var="page_body" value="<main>##content##</main>"-->

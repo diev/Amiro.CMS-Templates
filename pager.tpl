@@ -4,9 +4,9 @@
 
 <!--#set var="last" value="<a href="##link##" class="pager__button pager__button_type_last">##page##</a>"-->
 
-<!--#set var="prev" value="<a href="##link##" class="pager__button pager__button_type_prev">&larr;</a>"-->
+<!--#set var="prev" value="<a href="##link##" class="pager__button pager__button_type_prev">&lsaquo;</a>"-->
 
-<!--#set var="next" value="<a href="##link##" class="pager__button pager__button_type_next">&rarr;</a>"-->
+<!--#set var="next" value="<a href="##link##" class="pager__button pager__button_type_next">&rsaquo;</a>"-->
 
 <!--#set var="active" value="<span class="pager__button pager__button_state_active">##page##</span>"-->
 
@@ -18,13 +18,12 @@
 
 <!--#set var="page_tpl" value="##page_start## - ##page_end##"-->
 
-<!--#set var="body" value="
+<!--#set var="body" value="##--setglobalvar @g_pager_prev_next = '<div>'.prev.active.next.'</div>'--##
 <div class="pager">
-	<div class="pager__content">
 		##if(prev)##
 			##prev##
 		##else##
-			<span class="pager__button pager__button_type_prev pager__button_state_inactive">&larr;</span>
+			<span class="pager__button pager__button_type_prev pager__button_state_inactive">&lsaquo;</span>
 		##endif##
 		
 		##if(first)##
@@ -42,9 +41,8 @@
 		##if(next)##
 			##next##
 		##else##
-			<span class="pager__button pager__button_type_next pager__button_state_inactive">&rarr;</span>
+			<span class="pager__button pager__button_type_next pager__button_state_inactive">&rsaquo;</span>
 		##endif##
-	</div>
 </div>
 "-->
 
