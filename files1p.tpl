@@ -1,4 +1,4 @@
-﻿%%include_template "templates/ext_modules_custom_fields.tpl"%%
+%%include_template "templates/ext_modules_custom_fields.tpl"%%
 %%include_language "templates/lang/_menu.lng"%%
 %%include_language "templates/lang/files.lng"%%
 
@@ -167,7 +167,7 @@
 "-->
 
 <!--#set var="body_items" value="<!--body_items-->
-##setglobalvar @g_pages_path = g_pages_path_1.cat_link.g_pages_path_s.'<span class="active">'.cat_name.'</span>'##
+##setglobalvar @g_pages_path = g_pages_path_1.g_pages_path_s.cat_link.g_pages_path_s.'<span class="active">'.cat_name.'</span>'##
 ##setglobalvar @g_pages_nav = @g_pages_nav.cat_link##
 ##setglobalvar @page_name = cat_name##
 ##setglobalvar @g_subcat = 1##        
