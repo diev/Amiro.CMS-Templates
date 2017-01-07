@@ -16,5 +16,5 @@
 <!--#set var="item_level_0" value="<td><section>"-->
 
 <table id=sitemap border=0><tbody><tr valign="top">
-    ##map##
+	##map##
 </section></td></tr></tbody></table>

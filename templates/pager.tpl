@@ -19,7 +19,7 @@
 <!--#set var="page_tpl" value="##page_start## - ##page_end##"-->
 
 <!--#set var="body" value="##--setglobalvar @g_pager_prev_next = '<div>'.prev.active.next.'</div>'--##
-<div class="pager">
+	<div class="pager">
 		##if(prev)##
 			##prev##
 		##else##
@@ -43,16 +43,18 @@
 		##else##
 			<span class="pager__button pager__button_type_next pager__button_state_inactive">&rsaquo;</span>
 		##endif##
-</div>
+	</div>
 "-->
 
 ##-- Not used --##
 <!--#set var="page_size" value="
-<span class=small>%%page_size%%:</span>
-##--<select name="limit" class="filter" onChange="go_pagesize(this.value)">
-   [DATA]
-</select>--##
-<select name="limit" class="filter" onChange="window.location=frontBaseHref+'##link##&limit='+this.value">
-   ##data##
-</select>
+	<span class=small>%%page_size%%:</span>
+	##--
+	<select name="limit" class="filter" onChange="go_pagesize(this.value)">
+		[DATA]
+	</select>
+	--##
+	<select name="limit" class="filter" onChange="window.location=frontBaseHref+'##link##&limit='+this.value">
+		##data##
+	</select>
 "-->

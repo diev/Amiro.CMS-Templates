@@ -25,11 +25,13 @@
 <!--#set var="body" value="##body##"-->
 
 <!--#set var="print_version" value="
-##setglobalvar @g_print_version = '<span id=print_version><a href="'.print_link.'" target="_blank"><img src="_img/print.gif" align="absmiddle" border="0" alt="Версия для печати" title="Версия для печати"></a></span>'##
-##--<div id=print_version>
-    <a href="##print_link##" target="_blank"><img src="_img/print.gif" align="absmiddle" border="0"></a>
-    <a href="##print_link##" target="_blank">%%print_version%%</a>
-</div>--##
+	##setglobalvar @g_print_version = '<span id=print_version><a href="'.print_link.'" target="_blank"><img src="_img/print.gif" align="absmiddle" border="0" alt="Версия для печати" title="Версия для печати"></a></span>'##
+	##--
+	<div id=print_version>
+		<a href="##print_link##" target="_blank"><img src="_img/print.gif" align="absmiddle" border="0"></a>
+		<a href="##print_link##" target="_blank">%%print_version%%</a>
+	</div>
+	--##
 "-->
 
 ##--path--##

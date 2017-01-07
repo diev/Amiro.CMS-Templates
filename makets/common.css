@@ -1,0 +1,94 @@
+/* Delete all predefined AMI styles! */
+/* Start order history
+ * @tpl eshop_order_history.tpl
+ */
+
+.eshop-order-history-detail__back {
+	padding-top: 10px;
+}
+
+.eshop-order-history-list__id-status {
+	display: none;
+	color: #A6A6A6;
+	font-size: 12px;
+}
+
+@media screen and (max-width: 750px) {
+	.eshop-order-history-list__name,
+	.eshop-order-history-list__owners,
+	.eshop-order-history-list__comments,
+	.eshop-order-history-list__status,
+	.eshop-order-history-list__image,
+	.eshop-order-history-list__per-discount,
+	.eshop-order-history-list__abs-discount,
+	.eshop-order-history-list__price {
+		display: none;
+	}
+
+	.eshop-order-history-list__view {
+		width: 54px;
+	}
+
+	.eshop-order-history-detail .eshop-order-history-list__name {
+		display: table-cell;
+	}
+	
+	div.eshop-order-history-list__id-status {
+		display: block;
+	}
+
+	table.eshop-order-history-list td,
+	table.eshop-order-history-list tr {
+		font-size: 100%;
+	}
+}
+
+/* End order history
+ * @tpl eshop_order_history.tpl
+ */
+
+/* Start eshop properties table style
+ * @tpl _eshop_item_list.tpl
+ */
+.ami-eshop-properties__wrapper-table .eshop-item-tooltip-prop {display: none !important;}
+.ami-eshop-properties__wrapper-table .ami-eshop-properties__wrapper-table-tr__1 .eshop-item-tooltip-prop {display: block !important;}
+
+.ami-eshop-properties__wrapper-table td,
+.ami-eshop-properties__wrapper-table th {
+	padding: 6px 12px;
+	border: 1px solid #A7A7A7;
+	vertical-align: middle;
+}
+
+.ami-eshop-properties__wrapper-table .eshop-item-detailed__actual-price {
+	font-size: 16px;
+}
+
+.ami-eshop-properties__wrapper-table .eshop-item-detailed__price-tag {
+	float: left;
+	background: none;
+	padding: 0;
+	top: 6px;
+	position: relative;
+	min-height: 10px;
+}
+
+.ami-eshop-properties__wrapper-table .eshop-item-detailed__cart-box_base {
+	padding: 2px 12px;
+	float: right;
+	margin-left: 10px;
+}
+
+.ami-eshop-properties__wrapper-table th {
+	background:#fadf71;
+	background-color:#fff376;
+	background-repeat:repeat-x;
+	background-image:-moz-linear-gradient(top,#fff376,#f9d968);
+	background-image:-ms-linear-gradient(top,#fff376,#f9d968);
+	background-image:-webkit-linear-gradient(top,#fff376,#f9d968);
+	background-image:-o-linear-gradient(top,#fff376,#f9d968);
+	background-image:linear-gradient(top,#fff376,#f9d968);
+}
+/* Start eshop properties table style
+ * @tpl _eshop_item_list.tpl
+ */
