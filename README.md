@@ -1,4 +1,4 @@
-# Адаптированные шаблоны для Amiro.CMS
+# [РђРґР°РїС‚РёСЂРѕРІР°РЅРЅС‹Рµ С€Р°Р±Р»РѕРЅС‹ РґР»СЏ Amiro.CMS](http://diev.github.io/Amiro.CMS-Templates/)
 
 Customized templates for Amiro.CMS
 
