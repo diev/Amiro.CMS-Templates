@@ -16,7 +16,7 @@
 <!--#set var="item_cat_name;itemD_cat_name;urgent_item_cat_name" value="<!--item_cat_name-->##cat_name##"-->
 <!--#set var="item_cat_announce;itemD_cat_announce;urgent_item_cat_announce" value="<!--item_cat_announce--><div class="cat_announce">##cat_announce##</div>"-->
 <!--#set var="item_cat_body;itemD_cat_body;urgent_item_cat_body" value="<!--item_cat_body-->##cat_body##"-->
-<!--#set var="item_cat_link" value="<!--item_cat_link--><a href="##script_link##?##front_cats_link##">%%back_categoty_list%%</a>"-->
+<!--#set var="item_cat_link" value="<!--item_cat_link--><a href="##script_link##?##front_cats_link##">##--%%back_categoty_list%%--####page_name##</a>"-->
 
 <!--#set var="itemD_cat_name" value="<!--itemD_cat_name-->##cat_name##"-->
 <!--#set var="itemD_cat_announce" value="<!--itemD_cat_announce--><div class="cat_announce">##cat_announce##</div>"-->
